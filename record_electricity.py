@@ -21,7 +21,7 @@ base_fname = '{}_electricity.csv'.format(date)
 full_fname = os.path.join(config.data_dir, base_fname)
 
 os.makedirs(os.path.dirname(full_fname), exist_ok=True)
-if not os.path.exists(base_fname):
+if not os.path.exists(full_fname):
     with open(full_fname, 'w') as _fout:
         _fout.write(','.join(columns))
         _fout.write('\n')
